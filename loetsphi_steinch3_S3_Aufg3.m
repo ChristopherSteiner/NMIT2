@@ -16,7 +16,7 @@ for i = 0:(n-1)
     D(i+1, 1) = h(i+1) * D(i+1,1);
 end
 for k = 1:n
-    for i = 1:(5-k)
+    for i = 1:(n-k)
         D(i, k+1) = (4.^k*D(i+1,k) - D(i, k)) ./ (4.^(k)-1); 
     end
 end
