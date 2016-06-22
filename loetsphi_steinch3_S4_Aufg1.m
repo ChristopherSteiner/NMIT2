@@ -4,10 +4,10 @@ m = [2051113 1935155 1799290 1681120 1567611 1475282 1376301 1277921 1177704 107
 %Space Shuttle Berechnung
 % a) Geschwindigkeit, Beschleuningung, Massenänderung(t) und Massenänderung(h) anhand Input Daten
 % berechnen
-v = loetsphi_steinch3_S1_Aufg3(t, h);
-a = loetsphi_steinch3_S1_Aufg3(t, v);
-dmdt = loetsphi_steinch3_S1_Aufg3(t, m);
-dmdh = loetsphi_steinch3_S1_Aufg3(h, m);
+v = ableiten_funkt(t, h);
+a = ableiten_funkt(t, v);
+dmdt = ableiten_funkt(t, m);
+dmdh = ableiten_funkt(h, m);
 
 plot(t, h, 'r');
 plot(t, v, 'r');
