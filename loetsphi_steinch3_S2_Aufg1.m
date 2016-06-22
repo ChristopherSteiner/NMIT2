@@ -1,4 +1,5 @@
 % h-Extrapolation und Diskretisierungsfehler
+% D1f(x0, h) von f(x) = log(x^2) und x0 = 2
 h = [ 0.1 0.05 0.025 0.0125 ];
 f = @(x, h) (log((x + h).^2) - log(x.^2)) / h;
 d = 0;
