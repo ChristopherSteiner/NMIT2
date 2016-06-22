@@ -4,10 +4,10 @@ m = [2051113 1935155 1799290 1681120 1567611 1475282 1376301 1277921 1177704 107
 %Space Shuttle Berechnung
 % a) Geschwindigkeit, Beschleuningung, Massenänderung(t) und Massenänderung(h) anhand Input Daten
 % berechnen
-v = ableiten_funkt(t, h);
-a = ableiten_funkt(t, v);
-dmdt = ableiten_funkt(t, m);
-dmdh = ableiten_funkt(h, m);
+v       = ableiten_funkt(t, h);
+a       = ableiten_funkt(t, v);
+dmdt    = ableiten_funkt(t, m);
+dmdh    = ableiten_funkt(h, m);
 
 plot(t, h, 'r');
 plot(t, v, 'r');
@@ -18,7 +18,7 @@ plot(t, dmdh, 'r');
 
 plot(t, dmdt, 'r', t, dmdh .* v, 'b-.');
 
-% b)
+% b) potentielle und kinetische Energie zu jedem Zeitpunkt berechnen
 G = 6.673 * 10^-11;
 M = 5.976 * 10^24;
 R0 = 6378137;
@@ -32,6 +32,7 @@ end
 plot(t, epot, 'r', t, ekin, 'g', t, ekin + epot, 'b');
 legend('ePot', 'eKin', 'eTot');
 
-% c)
+% c) Wieviel Schweizer Haushalte können mit der verbrauchten Energie nach
+% 120s versorgt werden? (für ein ganzes Jahr)
 % etwas mehr als 63 Haushalte 
 ((ekin(length(t)) + epot(length(t))) / 10^10)
