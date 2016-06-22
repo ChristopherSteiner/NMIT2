@@ -1,4 +1,4 @@
-function [ dx ] = loetsphi_steinch3_S1_Aufg3( x, y )
+function [ dx ] = ableiten_funkt( x, y )
 %Erste Ableitung numerisch berechnen
 dx = 0; % Steigungen
 n = length(x);
