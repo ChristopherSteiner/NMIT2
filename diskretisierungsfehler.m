@@ -3,10 +3,10 @@ format long;
 tab = 0;
 x0 = 2;
 % f'(x) = 2/x
-D1f = @(x0, h) (log((x0 + h).^2) - log(x0.^2))/h;
-D1fehler = @(x0, h) abs((D1f(x0, h) - 2/x0));
-D2f = @(x0, h) (log((x0 + h).^2) - log((x0 - h).^2))/(2*h);
-D2fehler = @(x0, h) abs((D2f(x0, h) - 2/x0));
+D1f         =  @(x0, h) (log((x0 + h).^2) - log(x0.^2))/h;
+D1fehler    =  @(x0, h) abs((D1f(x0, h) - 2/x0));
+D2f         =  @(x0, h) (log((x0 + h).^2) - log((x0 - h).^2))/(2*h);
+D2fehler    =  @(x0, h) abs((D2f(x0, h) - 2/x0));
 for i=1:17
    tab(i, 1) = D1f(x0, 10.^-i);
    tab(i, 2) = D2f(x0, 10.^-i);
