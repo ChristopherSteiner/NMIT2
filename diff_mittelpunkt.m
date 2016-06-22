@@ -1,4 +1,4 @@
-function [x, y_mittelpunkt] = loetsphi_steinch3_S5_Aufg3(f, a, b, n, y)
+function [x, y_mittelpunkt] = diff_mittelpunkt(f, a, b, n, y)
 %Berechnet Anfangswertprobleme mittels Euler, Mittelpunkt und dem
 %modifizertem Euler
 %sample call
