@@ -1,3 +1,4 @@
+%Diskretisierungsfehler für D1 und D2 berechnen
 format long;
 tab = 0;
 x0 = 2;
