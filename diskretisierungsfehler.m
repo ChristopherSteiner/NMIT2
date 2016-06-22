@@ -1,4 +1,5 @@
 %Diskretisierungsfehler für D1 und D2 berechnen
+% f(x) = log(x^2) x0 = 2
 format long;
 tab = 0;
 x0 = 2;
