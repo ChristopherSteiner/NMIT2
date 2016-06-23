@@ -1,3 +1,4 @@
+% DGL lösen
 f = @(x, y) x^2 / y;
 f_exakt = @(x) sqrt(2*x^3/3+4);
 a = 0;
@@ -6,7 +7,7 @@ n = abs((b-a)/0.1);
 y0 = 2;
 y_exakt = 0;
 
-[x, y] = loetsphi_steinch3_S6_Aufg1(f, a, b, n, y0)
+[x, y] = diff_runge_kutta(f, a, b, n, y0)
 [x2, y_euler, y_mittelpunkt, y_modeuler] = loetsphi_steinch3_S5_Aufg3(f, a, b, n, y0)
 for i = 0:n
     y_exakt(i+1) = f_exakt(a+0.1*i);
