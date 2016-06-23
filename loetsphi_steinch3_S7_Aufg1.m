@@ -1,3 +1,6 @@
+% Adam Bashford Methode 4ter Ordnung
+% f = @(t, y) t.^2 + 0.1*y;
+% loetsphi_steinch3_S7_Aufg2(f, -1.5, 1.5, 10.^i, 1)
 b = 0;
 s = 3;
 n = 5;

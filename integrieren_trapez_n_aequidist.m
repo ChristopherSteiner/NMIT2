@@ -1,4 +1,4 @@
-function [ Tf_neq ] = loetsphi_steinch3_S3_Aufg4a( x, y )
+function [ Tf_neq ] = integrieren_trapez_n_aequidist( x, y )
 % Trapezregel für nicht äquidistiante (nicht immer der gleiche Abstand)
 % Werte
 

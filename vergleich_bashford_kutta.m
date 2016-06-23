@@ -9,11 +9,11 @@ yABError = 0;
 yRKError = 0;
 for i = 1:4
     tic;    
-    [xab4, yab4] = loetsphi_steinch3_S7_Aufg2(f, -1.5, 1.5, 10.^i, 1);
+    [xab4, yab4] = diff_adam_bashford(f, -1.5, 1.5, 10.^i, 1);
     tocAB(i) = toc;
     yABError(i) = abs(yab4(end)-yExact);
     tic;
-    [xRK, yRK]= loetsphi_steinch3_S6_Aufg1(f, -1.5, 1.5, 10.^i, 1);
+    [xRK, yRK]= diff_runge_kutta(f, -1.5, 1.5, 10.^i, 1);
     tocRK(i) = toc;
     yRKError(i) = abs(yRK(end)-yExact);
 end

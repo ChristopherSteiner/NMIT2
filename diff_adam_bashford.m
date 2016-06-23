@@ -1,10 +1,9 @@
-function [x, yab4] = loetsphi_steinch3_S7_Aufg2(f, a, b, n, y0)
+function [x, yab4] = diff_adam_bashford(f, a, b, n, y0)
 % Löst das Anfangsproblem auf dem Intervall a b mit n Schritten gemäss der
 % Adam-Bashford Methode 4. Ordnung
-% f = @(t, y) t.^2 + 0.1*y;
-% [x,y]=loetsphi_steinch3_S7_Aufg2(f, -1.7, 1.5, 10.^1, 1)
 x =0;
-[xRC, yRC] = loetsphi_steinch3_S6_Aufg1(f, a, b, n, y0);
+%Erste 4 Startwerte müssen mit Adam Bashford berechnet werden.
+[xRC, yRC] = diff_runge_kutta(f, a, b, n, y0);
 h = abs((b-a)/n);
 s = 3;
 for i=1:4
@@ -21,7 +20,7 @@ for i=4:n
           fab = @(u) (u+0).*(u+1).*(u+2).*(u+3)./(u+j);
        end
        b(j+1) = (-1)^j / (factorial(j)*factorial(s-j)); 
-       b(j+1) =  b(j+1)*loetsphi_steinch3_S3_Aufg3(fab, 0, 1, 5);     
+       b(j+1) = b(j+1)*integrieren_sum_trap_rom_extr(fab, 0, 1, 5);        
     end
     bFertig = 0;
     for bCounter = 1:4
