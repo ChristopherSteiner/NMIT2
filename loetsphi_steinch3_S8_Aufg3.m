@@ -39,8 +39,11 @@ end
 
 figure(1)
 plot(x, 3*(1-exp(-10*x)).*exp(-2*x), 'r', x, y_mittelpunkt, '--b');
+legend('exakt', 'genähert');
+title('Vergleich exakte und genährte Werte');
 figure(2)
 plot(x, h_tab)
+title('Variable h in abhängigkeit zur Zeit');
 
 % Experiment mit h:
 % Inital h hat nur einen Einfluss wenn es akzieptiert wird, also die

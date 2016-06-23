@@ -13,4 +13,6 @@ n = abs(b-a)/h;
 
 
 plot(t,y(1, :));
+title('Fadenpendel integriert mit Runge-Kutta');
+legend('Auslenkwinkel des Fadenpendels');
 ylim([-2 2]);
