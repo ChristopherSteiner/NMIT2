@@ -1,3 +1,4 @@
+% Anfangswertsproblem lösen
 f = @(t,y) -12*y+30*exp(-2*t);
 a = 0;
 b = 10;
@@ -20,7 +21,7 @@ while(x(i) < b)
    xh2 = x(i)+h/2;
    yh2 = y_mittelpunkt(i)+h/2*f(x(i),y_mittelpunkt(i));
    y_mittelpunkt(i+1) = y_mittelpunkt(i) + h * f(xh2, yh2);
-   
+   % b Schrittweite h adaptiv an Verhätlnisse anpassen
    if (abs(y_euler(i+1)-y_mittelpunkt(i+1)) < tol/20) 
        x(i+1) = x(i) + h;
        h = h*2;      
