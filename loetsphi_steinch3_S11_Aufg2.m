@@ -36,8 +36,12 @@ n = size(y,1);
 % a) A berechnen und Normalgleichungssystem lösen
 x = 1:n;
 % Koeffizienten berechnen:
-A = [data(:,1:4) ones(n,1)]; % [TTank TBenzin pTank pBenzin 1]
-lambda = A'*A\(A'*y);
+A = [data(1:end,1:4) ones(n,1)]; % [TTank TBenzin pTank pBenzin 1]
+A_t = A';
+A_t_A = A_t*A;
+lambda = A_t_A\(A_t*y);
+%A = [data(:,1:4) ones(n,1)]; % [TTank TBenzin pTank pBenzin 1]
+%lambda = A'*A\(A'*y);
 % Plots der Daten und Fit
 subplot(1,2,1)
 plot(x,y,'rx',x,A*lambda,'b')
