@@ -5,7 +5,7 @@ function [yy] = interpolation_kubische_splinefunktion(x,y,xx)
 % x = [ 0 1 2 3 ]
 % y = [ 2 1 2 2 ]
 % xx = [ 0.5 0.8 1.1 2.2]
-% loetsphi_steinch3_S10_Aufg2(x,y,xx)
+% interpolation_kubische_splinefunktion(x,y,xx)
 
 n = length(x) - 1;
 h = x(2:n+1) - x(1:n);

@@ -7,13 +7,17 @@ p2 = @(T) T.^1;
 p3 = @(T) T.^0;
 
 A = [ p1(x)' p2(x)' p3(x)' ];
+A
+%nach Lambda auflösen
 %A'*A*lambda = A'*y
 lambda = A'*A\(A'*y');
+
 a = lambda(1);
 b = lambda(2);
 c = lambda(3);
 
 %Plots der Daten und p(T)
+% @(T) a*T.^2+b*T+c;
 plot(x, y, 'rx', x, p(x), 'b');
 legend('Messpunkte', 'p(T)');
 
